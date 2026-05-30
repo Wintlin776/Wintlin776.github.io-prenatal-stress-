@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>你怀孕时有多焦虑，孩子一生都记得</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-soft: #3d3d5c;
+    --ink-muted: #7a7a9a;
+    --paper: #faf8f4;
+    --paper-warm: #f2ede4;
+    --paper-dark: #e8e2d8;
+    --accent: #c0392b;
+    --accent-soft: #e8a598;
+    --accent-pale: #fdf0ee;
+    --teal: #1a6b6b;
+    --teal-soft: #5fa8a8;
+    --teal-pale: #eaf4f4;
+    --amber: #b8690a;
+    --amber-soft: #e8b87a;
+    --amber-pale: #fdf5e8;
+    --purple: #6c4f9e;
+    --purple-soft: #b09ed4;
+    --purple-pale: #f0eef8;
+    --border: #d8d0c4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e4dc;
+    color: var(--ink);
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 300;
+    line-height: 1.9;
+  }
+
+  .article {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--paper);
+  }
+
+  /* ══ COVER ══ */
+  .cover {
+    position: relative;
+    background: var(--ink);
+    padding: 72px 48px 60px;
+    overflow: hidden;
+  }
+
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 40px, #fff 40px, #fff 41px),
+      repeating-linear-gradient(90deg, transparent, transparent 40px, #fff 40px, #fff 41px);
+  }
+
+  .cover-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--accent-soft);
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .cover-tag::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--accent-soft);
+  }
+
+  .cover h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.35;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .cover h1 .hl {
+    color: var(--accent-soft);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+  }
+
+  .cover-sub {
+    font-size: 14px;
+    color: #a0a0c0;
+    line-height: 1.7;
+    position: relative;
+    max-width: 440px;
+  }
+
+  .cover-meta {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    gap: 32px;
+    position: relative;
+  }
+
+  .cover-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cover-meta-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: #6060a0;
+    font-weight: 500;
+  }
+
+  .cover-meta-val {
+    font-size: 12px;
+    color: #a0a0c0;
+  }
+
+  /* ══ BODY ══ */
+  .body {
+    padding: 56px 48px;
+  }
+
+  /* scene */
+  .scene {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--ink);
+    padding: 24px 28px;
+    margin-bottom: 48px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    font-style: italic;
+  }
+
+  .scene cite {
+    display: block;
+    margin-top: 14px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  /* lead question */
+  .lead-q {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* body text */
+  .para {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.95;
+    margin-bottom: 20px;
+  }
+
+  .para strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .para em {
+    font-style: normal;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* section heading */
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin: 52px 0 20px;
+  }
+
+  .sec-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+  }
+
+  .sec-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    flex: 1;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 8px;
+  }
+
+  /* pull quote */
+  .pullquote {
+    margin: 36px 0;
+    padding: 28px 32px;
+    background: var(--accent-pale);
+    border-left: 4px solid var(--accent);
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.7;
+  }
+
+  .pullquote-src {
+    margin-top: 10px;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--accent-soft);
+    letter-spacing: 0.05em;
+  }
+
+  /* info box */
+  .infobox {
+    margin: 32px 0;
+    padding: 24px 28px;
+    border: 1px solid var(--border);
+    background: var(--paper-warm);
+  }
+
+  .infobox-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .infobox-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .infobox-body {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.85;
+  }
+
+  /* mechanism steps */
+  .steps {
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-content {}
+  .step-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .step-detail {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.7;
+  }
+
+  /* figure embed */
+  .fig-embed {
+    margin: 40px -8px;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 36px 28px 24px;
+  }
+
+  .fig-embed-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .fig-embed-title span {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .fig-embed-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .fig-caption {
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--ink-muted);
+    text-align: center;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  /* data callout */
+  .data-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .data-card {
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+    background: white;
+  }
+
+  .data-num {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .data-label {
+    font-size: 11px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* consequence cards */
+  .consequence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .con-card {
+    padding: 20px;
+    border-top: 3px solid;
+    background: white;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .con-card.c-neuro { border-top-color: var(--accent); }
+  .con-card.c-meta  { border-top-color: var(--amber); }
+  .con-card.c-cardio{ border-top-color: var(--purple); }
+  .con-card.c-epi   { border-top-color: var(--teal); }
+
+  .con-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .c-neuro .con-tag { color: var(--accent); }
+  .c-meta  .con-tag { color: var(--amber); }
+  .c-cardio .con-tag { color: var(--purple); }
+  .c-epi   .con-tag { color: var(--teal); }
+
+  .con-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  .con-detail {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+
+  /* dutch famine highlight */
+  .famine-box {
+    margin: 36px 0;
+    background: var(--ink);
+    color: white;
+    padding: 32px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .famine-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fff 0, #fff 1px,
+      transparent 0, transparent 50%
+    );
+    background-size: 8px 8px;
+  }
+
+  .famine-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--accent-soft);
+    margin-bottom: 16px;
+    display: block;
+    position: relative;
+  }
+
+  .famine-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .famine-body {
+    font-size: 13px;
+    color: #a0a0c0;
+    line-height: 1.85;
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  .famine-outcomes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    position: relative;
+  }
+
+  .famine-outcome {
+    padding: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .fo-period {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .fo-period.t1 { color: var(--accent-soft); }
+  .fo-period.t2 { color: var(--amber-soft); }
+  .fo-period.t3 { color: var(--teal-soft); }
+
+  .fo-result {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+  }
+
+  /* critique section */
+  .critique {
+    margin: 40px 0;
+    padding: 32px;
+    background: var(--paper-warm);
+    border: 1px solid var(--border);
+    position: relative;
+  }
+
+  .critique::before {
+    content: '批判';
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--ink);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 3px 12px;
+  }
+
+  .critique-body {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.95;
+  }
+
+  .critique-body strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* ending */
+  .ending {
+    margin-top: 48px;
+    padding: 36px 32px;
+    background: var(--ink);
+    color: white;
+    text-align: center;
+  }
+
+  .ending-quote {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .ending-quote em {
+    font-style: normal;
+    color: var(--accent-soft);
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .ending-sub {
+    font-size: 12px;
+    color: #6060a0;
+    line-height: 1.7;
+  }
+
+  /* references */
+  .refs-section {
+    padding: 40px 48px;
+    border-top: 1px solid var(--border);
+    background: var(--paper-warm);
+  }
+
+  .refs-title {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--ink-muted);
+    margin-bottom: 16px;
+  }
+
+  .ref-item {
+    font-size: 11px;
+    color: var(--ink-muted);
+    line-height: 1.85;
+    padding-left: 22px;
+    text-indent: -22px;
+    margin-bottom: 8px;
+  }
+
+  .ref-item em { font-style: italic; }
+
+  .footer-bar {
+    padding: 20px 48px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    border-top: 1px solid var(--border);
+    background: var(--paper);
+  }
+
+  @media (max-width: 580px) {
+    .cover { padding: 48px 24px 40px; }
+    .cover h1 { font-size: 28px; }
+    .body { padding: 40px 24px; }
+    .consequence-grid { grid-template-columns: 1fr; }
+    .data-row { grid-template-columns: 1fr; }
+    .famine-outcomes { grid-template-columns: 1fr; }
+    .fig-embed { margin: 32px 0; }
+    .refs-section { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+<article class="article">
+
+  <!-- ══ COVER ══ -->
+  <div class="cover">
+    <div class="cover-bg"></div>
+    <div class="cover-tag">环境与生殖发育</div>
+    <h1>你怀孕时有多焦虑，<br>孩子<span class="hl">一生都记得</span></h1>
+    <div class="cover-sub">孕期慢性压力如何通过皮质醇重编程胎儿神经系统——以及，这件事为什么不该怪孕妇自己</div>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">核心机制</span>
+        <span class="cover-meta-val">HPA轴 · 11β-HSD2 · 表观遗传</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">关键证据</span>
+        <span class="cover-meta-val">荷兰饥荒队列</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="cover-meta-label">影响时间</span>
+        <span class="cover-meta-val">子代一生</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ BODY ══ -->
+  <div class="body">
+
+    <!-- Opening scene -->
+    <div class="scene">
+      孕28周。截止日期压着，领导没有任何"孕妇特殊待遇"的意思。回家又和家人吵了一架，凌晨两点还睡不着。<br><br>
+      周围人都说：别想太多，压力大对孩子不好。<br><br>
+      <cite>——但为什么不好？"不好"到什么程度？会不会真的留下什么痕迹？</cite>
+    </div>
+
+    <div class="lead-q">不是玄学，是神经科学。胎儿的大脑，正在记录母亲压力的每一次峰值。</div>
+
+    <p class="para">我们已经知道孕期吸烟有害、饮酒有害、某些药物有害。但有一种暴露，几乎从未被认真讨论过——<strong>孕期慢性心理压力</strong>，以及它通过一套精密的激素机制，对胎儿大脑和内分泌系统造成的长期影响。</p>
+
+    <p class="para">这不是"心情不好影响宝宝"的民间说法。背后有清晰的分子机制，有跨越数十年的队列研究，有写进顶级期刊的数据。</p>
+
+    <!-- ── SECTION 1 ── -->
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">压力如何变成激素：HPA轴的激活</span>
+    </div>
+
+    <p class="para">人体感知到威胁时，大脑会启动一套应急系统，医学上称为<strong>HPA轴</strong>（下丘脑-垂体-肾上腺轴）。</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-label">杏仁核感知压力信号</div>
+          <div class="step-detail">职场冲突、睡眠剥夺、持续焦虑——大脑将这些信号解读为威胁，激活杏仁核，上传至下丘脑</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-label">下丘脑释放 CRH</div>
+          <div class="step-detail">促肾上腺皮质激素释放激素（CRH）传递信号至垂体前叶</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-label">垂体释放 ACTH</div>
+          <div class="step-detail">促肾上腺皮质激素（ACTH）经血液循环抵达肾上腺</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-label">肾上腺皮质分泌皮质醇</div>
+          <div class="step-detail">皮质醇（Cortisol）大量释放入血——这是压力反应的终端激素，短期内是保护性的，但<em>慢性持续升高，则是问题的开始</em></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HPA Diagram -->
+    <div class="fig-embed">
+      <div class="fig-embed-title"><span>图1</span> HPA轴激活路径示意图</div>
+      <svg viewBox="0 0 580 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+        <!-- Stress box -->
+        <rect x="20" y="20" width="540" height="44" rx="3" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="290" y="38" text-anchor="middle" font-size="12" fill="#c0392b" font-family="sans-serif" font-weight="500">慢性压力感知（职场、失眠、焦虑、家庭冲突……）</text>
+        <text x="290" y="55" text-anchor="middle" font-size="10" fill="#c0392b" font-family="sans-serif">杏仁核激活 → 信号上传下丘脑</text>
+
+        <!-- Arrow down -->
+        <line x1="290" y1="64" x2="290" y2="88" stroke="#888" stroke-width="1.5"/>
+        <polygon points="285,88 295,88 290,96" fill="#888"/>
+
+        <!-- Hypothalamus -->
+        <rect x="160" y="96" width="260" height="48" rx="3" fill="#eaf4f4" stroke="#1a6b6b" stroke-width="1.5"/>
+        <text x="290" y="116" text-anchor="middle" font-size="13" fill="#1a6b6b" font-family="sans-serif" font-weight="500">下丘脑（Hypothalamus）</text>
+        <text x="290" y="134" text-anchor="middle" font-size="10" fill="#5fa8a8" font-family="sans-serif">室旁核 · 释放 CRH</text>
+
+        <!-- Arrow + hormone label -->
+        <line x1="290" y1="144" x2="290" y2="166" stroke="#888" stroke-width="1.5"/>
+        <polygon points="285,166 295,166 290,174" fill="#888"/>
+        <rect x="215" y="151" width="150" height="18" rx="9" fill="#fff" stroke="#d8d0c4" stroke-width="1"/>
+        <text x="290" y="163" text-anchor="middle" font-size="10" fill="#7a7a9a" font-family="sans-serif">↓ CRH（促肾上腺皮质激素释放激素）</text>
+
+        <!-- Pituitary -->
+        <rect x="160" y="174" width="260" height="48" rx="3" fill="#f0eef8" stroke="#a89cd4" stroke-width="1.5"/>
+        <text x="290" y="194" text-anchor="middle" font-size="13" fill="#6c4f9e" font-family="sans-serif" font-weight="500">垂体前叶（Anterior Pituitary）</text>
+        <text x="290" y="212" text-anchor="middle" font-size="10" fill="#a89cd4" font-family="sans-serif">释放 ACTH</text>
+
+        <!-- Arrow + hormone label -->
+        <line x1="290" y1="222" x2="290" y2="244" stroke="#888" stroke-width="1.5"/>
+        <polygon points="285,244 295,244 290,252" fill="#888"/>
+        <rect x="215" y="229" width="150" height="18" rx="9" fill="#fff" stroke="#d8d0c4" stroke-width="1"/>
+        <text x="290" y="241" text-anchor="middle" font-size="10" fill="#7a7a9a" font-family="sans-serif">↓ ACTH（促肾上腺皮质激素）</text>
+
+        <!-- Adrenal -->
+        <rect x="160" y="252" width="260" height="48" rx="3" fill="#fdf5e8" stroke="#e8b87a" stroke-width="1.5"/>
+        <text x="290" y="272" text-anchor="middle" font-size="13" fill="#b8690a" font-family="sans-serif" font-weight="500">肾上腺皮质（Adrenal Cortex）</text>
+        <text x="290" y="290" text-anchor="middle" font-size="10" fill="#e8b87a" font-family="sans-serif">束状带 · 分泌皮质醇（Cortisol）↑↑</text>
+
+        <!-- Feedback arrow -->
+        <path d="M160 276 Q60 276 60 194 Q60 116 160 120" stroke="#c0392b" stroke-width="1.5" fill="none" stroke-dasharray="5 3"/>
+        <polygon points="155,116 165,120 160,126" fill="#c0392b"/>
+        <text x="52" y="200" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" transform="rotate(-90,52,200)">负反馈（慢性压力下减弱）</text>
+      </svg>
+      <div class="fig-caption">HPA轴激活路径 · 慢性压力下负反馈调节减弱，皮质醇长期维持高水平 · 据 Chrousos (2009)</div>
+    </div>
+
+    <p class="para">正常情况下，皮质醇升高后会通过<strong>负反馈机制</strong>抑制下丘脑和垂体，让系统自动回落平衡。但<em>慢性持续性压力会破坏这种负反馈</em>，皮质醇长期居高不下——问题从这里开始变得严重。</p>
+
+
+    <!-- ── SECTION 2 ── -->
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">胎盘屏障：一道会被突破的防线</span>
+    </div>
+
+    <p class="para">胎盘并非对所有物质都通透。针对母体皮质醇，胎盘的合体滋养层细胞高度表达一种酶——<strong>11β-羟基类固醇脱氢酶2型（11β-HSD2）</strong>。</p>
+
+    <p class="para">这种酶的作用是将皮质醇<strong>氧化灭活</strong>为无活性的"可的松"，正常情况下可拦截约80%的母体皮质醇，保护胎儿免受母亲应激状态的冲击。</p>
+
+    <div class="infobox">
+      <div class="infobox-title">屏障失效的条件</div>
+      <div class="infobox-body">
+        当母体长期处于慢性压力、营养不良或持续炎症状态时，胎盘11β-HSD2的基因表达下调，酶活性显著降低。屏障功能减弱后，母体皮质醇的穿透率大幅上升——<strong>大量皮质醇进入胎儿循环</strong>，而胎儿自身的肾上腺发育尚未完善，无法代偿清除。
+      </div>
+    </div>
+
+    <!-- Barrier Diagram -->
+    <div class="fig-embed">
+      <div class="fig-embed-title"><span>图2</span> 胎盘11β-HSD2屏障：正常 vs 慢性压力下失效</div>
+      <svg viewBox="0 0 580 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+
+        <!-- ── LEFT: Normal ── -->
+        <!-- Mother zone -->
+        <rect x="10" y="10" width="268" height="70" fill="#f7f3ee" rx="2"/>
+        <text x="144" y="28" text-anchor="middle" font-size="11" fill="#7a7a9a" font-family="sans-serif" font-weight="500">母体循环</text>
+        <!-- Cortisol molecules mother side -->
+        <circle cx="50" cy="52" r="10" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="50" y="56" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="600">C</text>
+        <circle cx="90" cy="44" r="10" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="90" y="48" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="600">C</text>
+        <circle cx="130" cy="55" r="10" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="130" y="59" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="600">C</text>
+        <circle cx="170" cy="46" r="10" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="170" y="50" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="600">C</text>
+        <circle cx="218" cy="52" r="10" fill="#fdf0ee" stroke="#e8a598" stroke-width="1.5"/>
+        <text x="218" y="56" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="600">C</text>
+
+        <!-- Placenta barrier normal -->
+        <rect x="10" y="80" width="268" height="50" fill="#eaf4f4" rx="2"/>
+        <text x="144" y="98" text-anchor="middle" font-size="11" fill="#1a6b6b" font-family="sans-serif" font-weight="500">胎盘 · 11β-HSD2 活性正常</text>
+        <text x="144" y="118" text-anchor="middle" font-size="10" fill="#5fa8a8" font-family="sans-serif">灭活约 80% 皮质醇 ✓</text>
+
+        <!-- Fetus zone normal -->
+        <rect x="10" y="130" width="268" height="100" fill="#f2f8f8" rx="2"/>
+        <text x="144" y="150" text-anchor="middle" font-size="11" fill="#7a7a9a" font-family="sans-serif" font-weight="500">胎儿循环</text>
+        <!-- Only 1 passes -->
+        <circle cx="144" cy="192" r="9" fill="#fdf0ee" stroke="#e8a598" stroke-width="1" opacity="0.5"/>
+        <text x="144" y="196" text-anchor="middle" font-size="8" fill="#c0392b" font-family="sans-serif" opacity="0.5">C</text>
+        <text x="144" y="220" text-anchor="middle" font-size="11" fill="#5fa8a8" font-family="sans-serif">极少量穿透，胎儿受保护</text>
+
+        <!-- label -->
+        <rect x="30" y="210" width="0" height="0"/>
+
+        <!-- ── DIVIDER ── -->
+        <line x1="294" y1="10" x2="294" y2="230" stroke="#d8d0c4" stroke-width="1" stroke-dasharray="4 3"/>
+
+        <!-- ── RIGHT: Stress ── -->
+        <!-- Mother zone stress -->
+        <rect x="302" y="10" width="268" height="70" fill="#fdf5f4" rx="2"/>
+        <text x="436" y="28" text-anchor="middle" font-size="11" fill="#c0392b" font-family="sans-serif" font-weight="500">母体循环（皮质醇持续升高）</text>
+        <!-- More cortisol -->
+        <circle cx="322" cy="50" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="322" y="54" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="352" cy="40" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="352" y="44" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="382" cy="55" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="382" y="59" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="414" cy="44" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="414" y="48" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="446" cy="55" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="446" y="59" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="478" cy="44" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="478" y="48" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="550" cy="50" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="550" y="54" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+
+        <!-- Placenta barrier stress -->
+        <rect x="302" y="80" width="268" height="50" fill="#fef8f0" rx="2"/>
+        <text x="436" y="98" text-anchor="middle" font-size="11" fill="#b8690a" font-family="sans-serif" font-weight="500">胎盘 · 11β-HSD2 活性下调</text>
+        <text x="436" y="118" text-anchor="middle" font-size="10" fill="#b8690a" font-family="sans-serif">屏障功能减弱，皮质醇大量穿透</text>
+
+        <!-- Penetration arrows -->
+        <line x1="370" y1="80" x2="350" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.7"/>
+        <line x1="420" y1="80" x2="420" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.7"/>
+        <line x1="480" y1="80" x2="500" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.7"/>
+
+        <!-- Fetus zone stress -->
+        <rect x="302" y="130" width="268" height="100" fill="#fdf2f0" rx="2"/>
+        <text x="436" y="150" text-anchor="middle" font-size="11" fill="#c0392b" font-family="sans-serif" font-weight="500">胎儿循环（皮质醇异常升高）</text>
+        <circle cx="360" cy="190" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="360" y="194" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="410" cy="185" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="410" y="189" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <circle cx="460" cy="192" r="11" fill="#fdf0ee" stroke="#c0392b" stroke-width="2"/>
+        <text x="460" y="196" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif" font-weight="700">C</text>
+        <text x="436" y="220" text-anchor="middle" font-size="11" fill="#c0392b" font-family="sans-serif">HPA轴发育窗口期遭受冲击</text>
+      </svg>
+      <div class="fig-caption">胎盘屏障正常功能 vs 慢性压力下失效对比 · 据 Seckl & Holmes (2007)</div>
+    </div>
+
+
+    <!-- ── SECTION 3 ── -->
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">胎儿HPA轴被"提前设定"</span>
+    </div>
+
+    <p class="para">胎儿的HPA轴在孕中晚期（约孕20周后）进入关键发育窗口。下丘脑室旁核、海马、杏仁核上的<strong>糖皮质激素受体（GR）</strong>密度在这个阶段达到峰值，对外源性皮质醇极度敏感。</p>
+
+    <p class="para">持续的高皮质醇暴露，会导致海马上的GR表达<strong>永久性下调</strong>。这意味着HPA轴对自身皮质醇的负反馈感知减弱——整个应激反应系统的"基准线"被调高了，且这一改变很难逆转。</p>
+
+    <div class="pullquote">
+      更令人不安的是：这一过程涉及 <strong>DNA甲基化修饰</strong>——GR基因（NR3C1）启动子区甲基化水平上升。这是一种<strong>表观遗传改变</strong>，理论上可以传递给下一代。
+      <div class="pullquote-src">Oberlander et al. (2008), Epigenetics · Glover (2011), J Child Psychology & Psychiatry</div>
+    </div>
+
+    <p class="para">换句话说：母亲孕期承受的压力，可能不只影响这个孩子，还会以某种形式刻入这个孩子的生殖细胞，再传递下去。</p>
+
+
+    <!-- ── SECTION 4 ── -->
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">子代会受到哪些影响：数据说话</span>
+    </div>
+
+    <p class="para">HPA轴的重编程不是抽象的分子改变，它会在子代的一生中以具体的健康结局呈现出来。</p>
+
+    <div class="consequence-grid">
+      <div class="con-card c-neuro">
+        <span class="con-tag">神经精神</span>
+        <div class="con-title">焦虑障碍、抑郁、ADHD风险升高</div>
+        <div class="con-detail">海马体积缩小，前额叶皮质发育受损，杏仁核对压力反应过度激活。子代成年后情绪调节能力受损</div>
+      </div>
+      <div class="con-card c-meta">
+        <span class="con-tag">代谢系统</span>
+        <div class="con-title">胰岛素抵抗、腹型肥胖倾向</div>
+        <div class="con-detail">宫内皮质醇重编程脂肪细胞分化和胰岛素受体敏感性，成年后2型糖尿病风险显著升高</div>
+      </div>
+      <div class="con-card c-cardio">
+        <span class="con-tag">心血管</span>
+        <div class="con-title">成年后高血压风险↑</div>
+        <div class="con-detail">宫内皮质醇暴露影响肾素-血管紧张素系统及血管平滑肌发育，是成人高血压的胎儿起源之一</div>
+      </div>
+      <div class="con-card c-epi">
+        <span class="con-tag">表观遗传</span>
+        <div class="con-title">NR3C1甲基化模式改变</div>
+        <div class="con-detail">出生时脐带血即可检测到GR基因甲基化水平异常，且与母亲孕期抑郁程度呈剂量相关</div>
+      </div>
+    </div>
+
+    <div class="data-row">
+      <div class="data-card">
+        <div class="data-num" style="color:var(--accent);">~80%</div>
+        <div class="data-label">正常状态下11β-HSD2可拦截的母体皮质醇比例</div>
+      </div>
+      <div class="data-card">
+        <div class="data-num" style="color:var(--amber);">孕中晚期</div>
+        <div class="data-label">胎儿HPA轴最敏感的发育关键窗口期</div>
+      </div>
+      <div class="data-card">
+        <div class="data-num" style="color:var(--teal);">代际</div>
+        <div class="data-label">表观遗传改变的潜在传递范围（理论层面）</div>
+      </div>
+    </div>
+
+
+    <!-- ── SECTION 5 ── -->
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <span class="sec-title">人类历史中的天然实验：荷兰饥荒队列</span>
+    </div>
+
+    <p class="para">动物实验可以人为控制变量，但人类研究要难得多——不可能故意让孕妇承受极端压力来做实验。</p>
+
+    <p class="para">然而历史给了研究者一次残酷的"自然实验"。</p>
+
+    <div class="famine-box">
+      <span class="famine-tag">DUTCH HUNGER WINTER · 1944–1945</span>
+      <div class="famine-title">荷兰饥荒队列：追踪半个世纪的代际研究</div>
+      <div class="famine-body">
+        1944年秋至1945年春，纳粹德国对荷兰实施粮食封锁，造成严重饥荒。约450万人长期处于极度营养匮乏与心理应激的双重暴露之下。战后，荷兰研究者开始系统追踪当年的孕妇后代——这批子代的健康数据，至今仍在持续更新，成为DOHaD理论（健康与疾病的发育起源）最重要的人类证据之一。
+      </div>
+      <div class="famine-outcomes">
+        <div class="famine-outcome">
+          <span class="fo-period t1">孕早期暴露</span>
+          <div class="fo-result">子代精神分裂症、情感障碍发病率显著升高；神经发育关键窗口期受损</div>
+        </div>
+        <div class="famine-outcome">
+          <span class="fo-period t2">孕中期暴露</span>
+          <div class="fo-result">肾单位数量减少；成年后高血压、慢性肾病风险升高；心血管系统发育重编程</div>
+        </div>
+        <div class="famine-outcome">
+          <span class="fo-period t3">孕晚期暴露</span>
+          <div class="fo-result">葡萄糖耐量受损、腹型肥胖倾向、2型糖尿病风险升高；代谢系统宫内设定异常</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline diagram -->
+    <div class="fig-embed">
+      <div class="fig-embed-title"><span>图3</span> 荷兰饥荒队列时间线与子代结局</div>
+      <svg viewBox="0 0 580 180" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;">
+        <!-- Timeline line -->
+        <line x1="40" y1="70" x2="540" y2="70" stroke="#d8d0c4" stroke-width="2"/>
+
+        <!-- Points -->
+        <circle cx="80" cy="70" r="7" fill="#1a1a2e"/>
+        <circle cx="200" cy="70" r="7" fill="#c0392b"/>
+        <circle cx="320" cy="70" r="7" fill="#c0392b"/>
+        <circle cx="440" cy="70" r="7" fill="#1a1a2e"/>
+        <circle cx="540" cy="70" r="7" fill="#5fa8a8"/>
+
+        <!-- Labels above -->
+        <text x="80" y="50" text-anchor="middle" font-size="11" fill="#1a1a2e" font-family="sans-serif" font-weight="500">1944年秋</text>
+        <text x="80" y="38" text-anchor="middle" font-size="9" fill="#7a7a9a" font-family="sans-serif">饥荒开始</text>
+        <text x="440" y="50" text-anchor="middle" font-size="11" fill="#1a1a2e" font-family="sans-serif" font-weight="500">1945年春</text>
+        <text x="440" y="38" text-anchor="middle" font-size="9" fill="#7a7a9a" font-family="sans-serif">饥荒结束</text>
+        <text x="540" y="50" text-anchor="middle" font-size="10" fill="#5fa8a8" font-family="sans-serif">数十年随访</text>
+
+        <!-- Famine zone -->
+        <rect x="80" y="58" width="360" height="24" fill="#fdf0ee" opacity="0.7" rx="2"/>
+        <text x="260" y="74" text-anchor="middle" font-size="10" fill="#c0392b" font-family="sans-serif" font-weight="500">极端应激暴露期（约7个月）</text>
+
+        <!-- Trimester windows below -->
+        <rect x="82" y="100" width="100" height="22" rx="11" fill="#fdf0ee" stroke="#e8a598" stroke-width="1"/>
+        <text x="132" y="115" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif">孕早期暴露</text>
+
+        <rect x="210" y="100" width="100" height="22" rx="11" fill="#fdf5e8" stroke="#e8b87a" stroke-width="1"/>
+        <text x="260" y="115" text-anchor="middle" font-size="9" fill="#b8690a" font-family="sans-serif">孕中期暴露</text>
+
+        <rect x="338" y="100" width="100" height="22" rx="11" fill="#eaf4f4" stroke="#5fa8a8" stroke-width="1"/>
+        <text x="388" y="115" text-anchor="middle" font-size="9" fill="#1a6b6b" font-family="sans-serif">孕晚期暴露</text>
+
+        <!-- Outcome labels -->
+        <text x="132" y="145" text-anchor="middle" font-size="9" fill="#c0392b" font-family="sans-serif">→ 神经精神障碍↑</text>
+        <text x="260" y="145" text-anchor="middle" font-size="9" fill="#b8690a" font-family="sans-serif">→ 高血压 / 肾病↑</text>
+        <text x="388" y="145" text-anchor="middle" font-size="9" fill="#1a6b6b" font-family="sans-serif">→ 代谢综合征↑</text>
+
+        <!-- Arrow to future -->
+        <path d="M540 70 L570 70" stroke="#5fa8a8" stroke-width="2"/>
+        <polygon points="568,66 578,70 568,74" fill="#5fa8a8"/>
+      </svg>
+      <div class="fig-caption">荷兰饥荒队列（Dutch Hunger Winter Cohort）不同孕期暴露与子代长期结局 · 据 Lumey et al. (2011)</div>
+    </div>
+
+    <p class="para">这批数据最重要的启示是：<strong>同一场灾难，因为暴露时间窗口不同，子代出现了完全不同的疾病谱</strong>。这有力证明了发育窗口期的不可替代性——宫内某几个月的经历，会以不同方式刻入不同器官的发育程序。</p>
+
+
+    <!-- ── SECTION 6 CRITIQUE ── -->
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <span class="sec-title">那又能怎样？——这件事不该怪孕妇</span>
+    </div>
+
+    <div class="critique">
+      <div class="critique-body">
+        <p style="margin-bottom:16px;">读到这里，有些人可能会有一种不舒服的感觉：<strong>这是不是在给孕妇施加新的压力？</strong>告诉她们"你的焦虑会伤害孩子"，然后让她们"自己想开点"？</p>
+
+        <p style="margin-bottom:16px;">这是这类科普最危险的陷阱。如果我们只讲机制，不讲成因，最终的效果就是把一个<strong>结构性问题</strong>转化为<strong>个体道德责任</strong>——孩子出了问题，是妈妈孕期不够淡定。</p>
+
+        <p style="margin-bottom:16px;">但问题的根源在哪里？中国职场对孕妇的隐性歧视从未消失；产假制度覆盖的只是生育本身，孕期承受的职业压力几乎没有任何制度性缓冲；家庭中的情绪支持高度依赖伴侣的个人意愿，而不是任何可以依靠的社会结构。</p>
+
+        <p><strong>真正有效的干预有充分的证据支持：</strong>高质量的社会支持网络、伴侣的情感参与、减少职场应激暴露——这些对子代神经发育结局有显著的保护效应。它们都指向同一个方向：<em>不是让孕妇更努力地"想开点"，而是让她们所处的环境更少制造压力。</em></p>
+      </div>
+    </div>
+
+
+    <!-- ── Ending ── -->
+    <div class="ending">
+      <div class="ending-quote">
+        胎儿的神经系统，不是在出生后才开始被塑造的。<br>
+        孕期的每一个月，都是一段<em>无法重来的发育窗口</em>。<br><br>
+        我们讨论孕期营养、孕期运动、孕期辐射——<br>
+        却很少认真讨论<em>孕期的社会环境</em>。
+      </div>
+      <div class="ending-sub">也许，这才是最值得被写进母婴手册的那一页。</div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- ══ REFERENCES ══ -->
+  <div class="refs-section">
+    <div class="refs-title">参考文献</div>
+    <div class="ref-item">1. Chrousos, G.P. (2009). Stress and disorders of the stress system. <em>Nature Reviews Endocrinology</em>, 5(7), 374–381.</div>
+    <div class="ref-item">2. Seckl, J.R., & Holmes, M.C. (2007). Mechanisms of disease: glucocorticoids, their placental metabolism and fetal programming of adult pathophysiology. <em>Nature Clinical Practice Endocrinology & Metabolism</em>, 3(6), 479–488.</div>
+    <div class="ref-item">3. Benediktsson, R., et al. (1993). Glucocorticoid exposure in utero: new model for adult hypertension. <em>The Lancet</em>, 341(8841), 339–341.</div>
+    <div class="ref-item">4. Glover, V. (2011). Annual Research Review: Prenatal stress and the origins of psychopathology: an evolutionary perspective. <em>Journal of Child Psychology and Psychiatry</em>, 52(4), 356–367.</div>
+    <div class="ref-item">5. Oberlander, T.F., et al. (2008). Prenatal exposure to maternal depression, neonatal methylation of human glucocorticoid receptor gene (NR3C1) and infant cortisol stress responses. <em>Epigenetics</em>, 3(2), 97–106.</div>
+    <div class="ref-item">6. Van den Bergh, B.R.H., et al. (2020). Prenatal developmental origins of behavior and mental health: The influence of maternal stress in pregnancy. <em>Neuroscience & Biobehavioral Reviews</em>, 117, 26–64.</div>
+    <div class="ref-item">7. Phillips, D.I.W., et al. (2000). Elevated plasma cortisol concentrations: a link between low birth weight and the insulin resistance syndrome? <em>Journal of Clinical Endocrinology & Metabolism</em>, 85(12), 4529–4532.</div>
+    <div class="ref-item">8. Lumey, L.H., et al. (2011). Cohort Profile: The Dutch Hunger Winter Families Study. <em>International Journal of Epidemiology</em>, 40(4), 941–947.</div>
+    <div class="ref-item">9. Susser, E., & Stein, Z. (1994). Timing in prenatal nutrition: a reprise of the Dutch Famine Study. <em>Nutrition Reviews</em>, 52(3), 84–94.</div>
+  </div>
+
+  <div class="footer-bar">《环境与生殖发育》小组作业 · 推文配套全文</div>
+
+</article>
+</body>
+</html>
